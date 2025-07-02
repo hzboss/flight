@@ -53,38 +53,59 @@ UserFlightInfo::UserFlightInfo(Flight& flight,User& user,QWidget *parent)
     QPixmap scaledPixmap = QPixmap::fromImage(image).scaled(labelSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     ui->ImageLabel->setPixmap(scaledPixmap);
     connect(ui->BuyTicketBtn, &QPushButton::clicked, [this, &user,reseats]() {
-            QString flightid = ui->FlightId->text();
-            QString sp = ui->StartPoint->text();
-            QString ep = ui->EndPoint->text();
-            QDateTime st = ui->StartTime->dateTime();
-            QDateTime et = ui->EndTime->dateTime();
-            int sid = 0;
-            Flight f = Flight::Seekres(flightid);
-            std::vector<int> seats(1000,0);
-            std::vector<QString> passengers = f.getPassengers();
-            for(auto passenger : passengers){
-                User *curuser = new User(passenger);
-                int notnull = curuser->getcurflightsid(flightid);
-                seats[notnull] = 1;
-                delete curuser;
+    QString flightid = ui->FlightId->text();
+    QString sp = ui->StartPoint->text();
+    QString ep = ui->EndPoint->text();
+    QDateTime st = ui->StartTime->dateTime();
+    QDateTime et = ui->EndTime->dateTime();
+    int sid = 0;
+    Flight f = Flight::Seekres(flightid);
+    std::vector<int> seats(1000,0);
+    std::vector<QString> passengers = f.getPassengers();
+    for(auto passenger : passengers){
+        User *curuser = new User(passenger);
+        int notnull = curuser->getcurflightsid(flightid);
+        seats[notnull] = 1;
+        delete curuser;
+    }
+    for(int i = 1;i <= f.getNum();i++){
+        if(seats[i] == 0){
+            sid = i;
+            break;
+        }
+    }
+    if (!flightid.isEmpty() && !sp.isEmpty() && !ep.isEmpty()) {
+        user.BuyTicket(flightid, sp, ep, st, et, sid);
+        QString useraccount = user.getAccount();
+        if(f.addPassenger(useraccount,sid)){
+            // 复用搜索按钮的刷新逻辑
+            QString id = flightid;
+            Flight target = Flight::Seekres(id);
+            QWidget *contentWidget = ui->UserShowFlightArea->widget();
+            if (!contentWidget) {
+                contentWidget = new QWidget();
+                ui->UserShowFlightArea->setWidget(contentWidget);
             }
-            for(int i = 1;i <= f.getNum();i++){
-                if(seats[i] == 0){
-                    sid = i;
-                    break;
+            QLayout *existingLayout = contentWidget->layout();
+            if (existingLayout) {
+                while (QLayoutItem *item = existingLayout->takeAt(0)) {
+                    delete item->widget();
+                    delete item;
                 }
+                delete existingLayout;
             }
-            if (!flightid.isEmpty() && !sp.isEmpty() && !ep.isEmpty()) {
-                user.BuyTicket(flightid, sp, ep, st, et, sid);
-                QString useraccount = user.getAccount();
-                if(f.addPassenger(useraccount,sid)){
-                    ui->RemainSeatsNum->setText(QString::number(reseats-1));
-                    QMessageBox::information(nullptr, "提示", "购票成功");
-                }else{
-                    QMessageBox::information(nullptr, "提示", "无法购买两张票");
-                }
+            if(target.getFlightid()!="null"){
+                QVBoxLayout *layout = new QVBoxLayout(contentWidget);
+                UserFlightInfo* flight = new UserFlightInfo(target,user,this);
+                layout->addWidget(flight);
             }
-    });
+            
+            QMessageBox::information(nullptr, "提示", "购票成功");
+        }else{
+            QMessageBox::information(nullptr, "提示", "无法购买两张票");
+        }
+    }
+});
 }
 
 UserFlightInfo::~UserFlightInfo()
