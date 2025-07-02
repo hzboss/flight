@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PassInfo</class>
+ <widget class="QWidget" name="PassInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>52</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+     </property>
+     <property name="text">
+      <string>账号</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="AccountLine">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: #e0f7fa; /* 浅天蓝色背景，与蓝色系相符 */
+    border: 2px solid #4682b4; /* 边框颜色为深蓝色，保持不变 */
+    border-radius: 10px; /* 圆角半径保持不变 */
+    padding: 5px; /* 内边距保持不变 */
+    color: #000000; /* 文字颜色改为黑色，以确保在浅蓝色背景上可见 */
+    font-size: 14px; /* 字体大小保持不变 */
+    selection-background-color: #add8e6; /* 选中文字的背景色为浅蓝色，保持不变 */
+    selection-color: #000000; /* 选中文字的颜色为黑色，保持不变 */
+}
+
+QLineEdit:focus {
+    border-color: #87ceeb; /* 聚焦时边框颜色为天蓝色，保持不变 */
+    outline: none; /* 移除默认的聚焦边框，保持不变 */
+}
+
+QLineEdit:disabled {
+    background-color: #d3d3d3; /* 禁用时背景色为更暗的灰色，或者可以选择一个更浅的蓝色调，但这里保持为灰色以区分 */
+    color: #888888; /* 禁用时文字颜色为更暗的灰色，以确保在灰色背景上仍然可见，但对比度较低 */
+    /* 或者，如果背景足够浅，可以使用：color: #000000; 以确保文字清晰可见 */
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+     </property>
+     <property name="text">
+      <string>性别</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="GenderLine">
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: #e6e6fa; /* 浅紫色背景 */
+    border: 2px solid #9b59b6; /* 紫色边框 */
+    border-radius: 4px; /* 圆角边框 */
+    padding: 5px; /* 内边距 */
+    color: #4b0082; /* 深紫色文本（与浅紫色背景形成对比） */
+    selection-background-color: #9b59b6; /* 选中时的背景颜色（与边框颜色相同） */
+    selection-color: #ffffff; /* 选中时的文本颜色（白色） */
+}
+
+QLineEdit:focus {
+    border-color: #6a0dad; /* 聚焦时边框颜色变深为深紫色 */
+    box-shadow: 0 0 4px rgba(106, 13, 173, 0.5); /* 聚焦时阴影效果使用深紫色RGBA */
+}
+
+QLineEdit:disabled {
+    background-color: #d8bfd8; /* 禁用时背景颜色变为更浅的紫色 */
+    border-color: #b09cd9; /* 禁用时边框颜色变为更浅的紫色 */
+    color: #800080; /* 禁用时文本颜色变为中紫色 */
+}
+
+QLineEdit::placeholder {
+    color: #800080; /* 占位符文本颜色使用中紫色 */
+    font-style: italic; /* 占位符文本斜体 */
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+     </property>
+     <property name="text">
+      <string>年龄</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="AgeLine">
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: #e0ffe0; /* 浅绿色背景 */
+    border: 2px solid #32cd32; /* 绿色边框 */
+    border-radius: 4px; /* 圆角边框 */
+    padding: 5px; /* 内边距 */
+    color: #000000; /* 黑色文本（与浅绿色背景形成对比） */
+    selection-background-color: #90ee90; /* 选中时的背景颜色（比边框稍浅的绿色） */
+    selection-color: #000000; /* 选中时的文本颜色（黑色） */
+}
+
+QLineEdit:focus {
+    border-color: #006400; /* 聚焦时边框颜色变深为深绿色 */
+    box-shadow: 0 0 4px rgba(0, 100, 0, 0.5); /* 聚焦时阴影效果使用深绿色RGBA */
+}
+
+QLineEdit:disabled {
+    background-color: #d3f5d3; /* 禁用时背景颜色变为更浅的绿色 */
+    border-color: #98fb98; /* 禁用时边框颜色变为与浅绿色相协调的浅色 */
+    color: #556b2f; /* 禁用时文本颜色变为深绿色（与浅绿色相协调） */
+}
+
+QLineEdit::placeholder {
+    color: #556b2f; /* 占位符文本颜色使用深绿色（与浅绿色相协调） */
+    font-style: italic; /* 占位符文本斜体 */
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_4">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+     </property>
+     <property name="text">
+      <string>座位号</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="SeatIdLine">
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: #e0ffe0; /* 浅青色背景 */
+    border: 2px solid #7fffd4; /* 青色边框 */
+    border-radius: 4px; /* 圆角边框保持不变 */
+    padding: 5px; /* 内边距保持不变 */
+    color: #006400; /* 深绿色文本，与青色形成对比 */
+    selection-background-color: #7fffd4; /* 选中时的背景颜色与边框颜色相同 */
+    selection-color: #000000; /* 选中时的文本颜色为黑色，确保可读性 */
+}
+
+QLineEdit:focus {
+    border-color: #008000; /* 聚焦时边框颜色为更深的青色（或绿色） */
+    box-shadow: 0 0 4px rgba(0, 128, 0, 0.5); /* 聚焦时阴影效果为青色 */
+}
+
+QLineEdit:disabled {
+    background-color: #d3f5d3; /* 禁用时背景颜色为更浅的青色 */
+    border-color: #a8dadc; /* 禁用时边框颜色为更浅的青色 */
+    color: #556b2f; /* 禁用时文本颜色为较暗的青色（或绿色） */
+}
+
+QLineEdit::placeholder {
+    color: #556b2f; /* 占位符文本颜色与禁用时文本颜色相同 */
+    font-style: italic; /* 占位符文本斜体保持不变 */
+}</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyOrderWindow</class>
+ <widget class="QWidget" name="MyOrderWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>721</width>
+    <height>532</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>510</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="RefreshBtn">
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>75</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #90EE90; /* 浅绿色背景 */
+    border: 2px solid #008000; /* 深绿色边框 */
+    border-radius: 8px; /* 圆角边框保持不变 */
+    color: #ffffff; /* 白色文本保持不变 */
+    padding: 10px 20px; /* 内边距保持不变 */
+    font-size: 16px; /* 字体大小保持不变 */
+    min-width: 100px; /* 最小宽度保持不变 */
+    transition: background-color 0.3s, border-color 0.3s; /* 平滑过渡效果保持不变 */
+}
+
+QPushButton:hover {
+    background-color: #BFFFBF; /* 鼠标悬停时背景颜色变为更浅的绿色 */
+    border-color: #32CD32; /* 鼠标悬停时边框颜色变为亮绿色 */
+}
+
+QPushButton:pressed {
+    background-color: #32CD32; /* 按下时背景颜色变为亮绿色 */
+    border-color: #006400; /* 按下时边框颜色变为更深的绿色 */
+}
+
+QPushButton:disabled {
+    background-color: #D3E5F3; /* 原始代码中为浅灰绿色到浅青色的渐变，但这里改为纯浅绿色系的#C0FFC0可能更合适 */
+    border-color: #8FBC8F; /* 橄榄绿灰色边框 */
+    color: #888888; /* 禁用时文本颜色保持为灰色，或可根据需求调整 */
+    /* 注意：禁用状态的背景颜色可能需要进一步调整以确保与绿色系主题相符 */
+}</string>
+        </property>
+        <property name="text">
+         <string>刷新</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="TicketShowArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>701</width>
+        <height>444</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

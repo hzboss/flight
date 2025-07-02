@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserLogin</class>
+ <widget class="QDialog" name="UserLogin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>220</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #f2f2f2; /* 浅灰色背景 */
+    border: 1px solid #888888; /* 深灰色边框，比按钮边框稍暗 */
+    border-radius: 10px; /* 与按钮相同的圆角半径 */
+    padding: 20px; /* 对话框内边距，根据需要调整 */
+    color: #333333; /* 深灰色文字，与背景形成对比 */
+    font-size: 14px; /* 与按钮相同的字体大小 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 轻微的阴影效果，增加立体感 */
+}
+
+QDialog::title-bar {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    border-left: 2px solid #555555; /* 与按钮边框相同的灰色 */
+    border-top: 2px solid #555555; /* 与按钮边框相同的灰色 */
+    border-right: 2px solid #888888; /* 深灰色边框，与对话框边框颜色协调 */
+    border-bottom: none;
+    background-color: #e0e0e0; /* 标题栏背景色，比对话框背景稍深 */
+    color: #333333; /* 标题栏文字颜色，与对话框文字颜色相同 */
+    font-size: 16px; /* 标题栏字体大小，比对话框字体稍大 */
+    font-weight: bold; /* 标题栏字体加粗 */
+}
+
+/* 注意：QDialog::title-bar 的样式可能因 Qt 版本和平台而异，上述样式可能不完全适用 */
+
+/* 如果需要自定义标题栏按钮（如关闭按钮），可以使用 QDialogButtonBox 或其他方法 */</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_4">
+   <item>
+    <widget class="QWidget" name="widget_5" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QWidget" name="widget_3" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QWidget" name="widget" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+              </property>
+              <property name="text">
+               <string>账号：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="UserAccLine">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    background-color: #e0f7fa; /* 浅天蓝色背景，与蓝色系相符 */
+    border: 2px solid #4682b4; /* 边框颜色为深蓝色，保持不变 */
+    border-radius: 10px; /* 圆角半径保持不变 */
+    padding: 5px; /* 内边距保持不变 */
+    color: #000000; /* 文字颜色改为黑色，以确保在浅蓝色背景上可见 */
+    font-size: 14px; /* 字体大小保持不变 */
+    selection-background-color: #add8e6; /* 选中文字的背景色为浅蓝色，保持不变 */
+    selection-color: #000000; /* 选中文字的颜色为黑色，保持不变 */
+}
+
+QLineEdit:focus {
+    border-color: #87ceeb; /* 聚焦时边框颜色为天蓝色，保持不变 */
+    outline: none; /* 移除默认的聚焦边框，保持不变 */
+}
+
+QLineEdit:disabled {
+    background-color: #d3d3d3; /* 禁用时背景色为更暗的灰色，或者可以选择一个更浅的蓝色调，但这里保持为灰色以区分 */
+    color: #888888; /* 禁用时文字颜色为更暗的灰色，以确保在灰色背景上仍然可见，但对比度较低 */
+    /* 或者，如果背景足够浅，可以使用：color: #000000; 以确保文字清晰可见 */
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_2" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+              </property>
+              <property name="text">
+               <string>密码：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="UserPassLine">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    background-color: #e0f7fa; /* 浅天蓝色背景，与蓝色系相符 */
+    border: 2px solid #4682b4; /* 边框颜色为深蓝色，保持不变 */
+    border-radius: 10px; /* 圆角半径保持不变 */
+    padding: 5px; /* 内边距保持不变 */
+    color: #000000; /* 文字颜色改为黑色，以确保在浅蓝色背景上可见 */
+    font-size: 14px; /* 字体大小保持不变 */
+    selection-background-color: #add8e6; /* 选中文字的背景色为浅蓝色，保持不变 */
+    selection-color: #000000; /* 选中文字的颜色为黑色，保持不变 */
+}
+
+QLineEdit:focus {
+    border-color: #87ceeb; /* 聚焦时边框颜色为天蓝色，保持不变 */
+    outline: none; /* 移除默认的聚焦边框，保持不变 */
+}
+
+QLineEdit:disabled {
+    background-color: #d3d3d3; /* 禁用时背景色为更暗的灰色，或者可以选择一个更浅的蓝色调，但这里保持为灰色以区分 */
+    color: #888888; /* 禁用时文字颜色为更暗的灰色，以确保在灰色背景上仍然可见，但对比度较低 */
+    /* 或者，如果背景足够浅，可以使用：color: #000000; 以确保文字清晰可见 */
+}</string>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::EchoMode::Password</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="EyeBtn">
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_4" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="UserReBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border: 2px solid #555555; /* 灰色边框保持不变 */
+    border-radius: 10px; /* 圆角边框的半径保持不变 */
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #add8e6, stop: 1 #87ceeb); /* 浅蓝色到深蓝色的渐变背景 */
+    color: white; /* 白色文字，颜色保持不变 */
+    padding: 5px 10px; /* 内边距保持不变 */
+    font-size: 14px; /* 字体大小保持不变 */
+    cursor: pointer; /* 鼠标悬停时显示为手形，保持不变 */
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0ffff, stop: 1 #b3e5fc); /* 鼠标悬停时背景色变为更浅的蓝色 */
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #87ceeb, stop: 1 #4682b4); /* 按钮按下时背景色变为稍深的蓝色 */
+}</string>
+           </property>
+           <property name="text">
+            <string>注册</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="UserisLoginBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border: 2px solid #555555; /* 灰色边框保持不变 */
+    border-radius: 10px; /* 圆角边框的半径保持不变 */
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #add8e6, stop: 1 #87ceeb); /* 浅蓝色到深蓝色的渐变背景 */
+    color: white; /* 白色文字，颜色保持不变 */
+    padding: 5px 10px; /* 内边距保持不变 */
+    font-size: 14px; /* 字体大小保持不变 */
+    cursor: pointer; /* 鼠标悬停时显示为手形，保持不变 */
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #e0ffff, stop: 1 #b3e5fc); /* 鼠标悬停时背景色变为更浅的蓝色 */
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #87ceeb, stop: 1 #4682b4); /* 按钮按下时背景色变为稍深的蓝色 */
+}</string>
+           </property>
+           <property name="text">
+            <string>登录</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

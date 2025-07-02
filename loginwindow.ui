@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>372</width>
+    <height>271</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LoginWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #add8e6, stop: 1 #0000ff); /* 浅蓝色到深蓝色的渐变背景 */
+    border-radius: 15px; /* 圆角边框 */
+}
+
+QMainWindow QMenuBar {
+    background-color: rgba(0, 0, 255, 0.5); /* 半透明深蓝色背景，与浅蓝色到深蓝色的渐变相协调 */
+    color: #ffffff; /* 白色文字，确保在深色背景上可读 */
+    font-size: 16px; /* 字体大小 */
+    padding: 10px; /* 内边距 */
+    border-radius: 15px 15px 0 0; /* 与主窗口圆角相匹配，但底部为直角 */
+}
+
+QMainWindow QStatusBar {
+    background-color: rgba(0, 128, 255, 0.3); /* 半透明中蓝色背景，与深蓝色渐变相协调且较菜单栏更淡一些 */
+    color: #ffffff; /* 白色文字，确保在深色背景上可读 */
+    font-size: 12px; /* 字体大小 */
+    padding: 5px; /* 内边距 */
+    border-radius: 0 0 15px 15px; /* 与主窗口圆角相匹配，但顶部为直角 */
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ffffff, stop: 1 #d3d3d3); /* 白色到浅灰色的渐变背景 */
+    border: 1px solid #cccccc; /* 灰色边框 */
+    border-radius: 5px; /* 圆角边框 */
+    padding: 15px; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    color: #333333; /* 深灰色文字 */
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #add8e6, stop: 1 #00008b); /* 浅蓝色到深蓝色的渐变背景 */
+    border: none; /* 消除边框 */
+    border-radius: 5px; /* 圆角边框 */
+    padding: 15px; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    color: #ffffff; /* 文字颜色改为白色以提高可读性 */
+}</string>
+         </property>
+         <property name="text">
+          <string>Welcome to our system!</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ffffff, stop: 1 #d3d3d3); /* 白色到浅灰色的渐变背景 */
+    border: 1px solid #cccccc; /* 灰色边框 */
+    border-radius: 5px; /* 圆角边框 */
+    padding: 15px; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    color: #333333; /* 深灰色文字 */
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="UserLoginBtn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: #add8e6; /* 浅蓝色背景 */
+    border: none; /* 无边框 */
+    color: #000000; /* 黑色文字，确保在浅蓝色背景上可读 */
+    padding: 10px 20px; /* 内边距 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 无文字装饰 */
+    display: inline-block; /* 行内块元素 */
+    font-size: 16px; /* 字体大小 */
+    margin: 4px 2px; /* 外边距 */
+    cursor: pointer; /* 鼠标悬停时显示为手形 */
+    border-radius: 8px; /* 圆角边框 */
+    transition-duration: 0.4s; /* 过渡动画时间 */
+}
+
+QPushButton:hover {
+    background-color: #87CEEB; /* 鼠标悬停时背景色变为稍深的浅蓝色 */
+}
+
+QPushButton:pressed {
+    background-color: #6495ED; /* 按钮按下时背景色变为更深的浅蓝色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>用户登录</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="AdminLoginBtn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: #add8e6; /* 浅蓝色背景 */
+    border: none; /* 无边框 */
+    color: #000000; /* 黑色文字，确保在浅蓝色背景上可读 */
+    padding: 10px 20px; /* 内边距 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 无文字装饰 */
+    display: inline-block; /* 行内块元素 */
+    font-size: 16px; /* 字体大小 */
+    margin: 4px 2px; /* 外边距 */
+    cursor: pointer; /* 鼠标悬停时显示为手形 */
+    border-radius: 8px; /* 圆角边框 */
+    transition-duration: 0.4s; /* 过渡动画时间 */
+}
+
+QPushButton:hover {
+    background-color: #87CEEB; /* 鼠标悬停时背景色变为稍深的浅蓝色 */
+}
+
+QPushButton:pressed {
+    background-color: #6495ED; /* 按钮按下时背景色变为更深的浅蓝色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>管理员登录</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

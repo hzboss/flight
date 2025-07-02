@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>photosources/ft2.jpeg</file>
+        <file>photosources/ft1.jpeg</file>
+        <file>photosources/login1.jpeg</file>
+        <file>photosources/login2.jpg</file>
+        <file>photosources/rg.jpeg</file>
+        <file>photosources/mainwindow.jpg</file>
+        <file>photosources/order.jpeg</file>
+        <file>photosources/adminlogin.jpg</file>
+        <file>photosources/userlogin.jpeg</file>
+        <file>photosources/passengers.jpeg</file>
+        <file>photosources/addflight.jpeg</file>
+        <file>photosources/password1.jpg</file>
+        <file>photosources/password2.jpg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminMainWindow</class>
+ <widget class="QMainWindow" name="AdminMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>791</width>
+    <height>691</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_11">
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QWidget" name="widget_22" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <spacer name="horizontalSpacer_13">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_22">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+            </property>
+            <property name="text">
+             <string>起点</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="StartPointLine">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    background-color: #e0f7fa; /* 浅蓝色背景 */
+    border: 2px solid #4fc3f7; /* 蓝色边框 */
+    border-radius: 4px; /* 圆角边框 */
+    padding: 5px; /* 内边距 */
+    color: #005f6a; /* 深蓝色文本 */
+    selection-background-color: #4fc3f7; /* 选中时的背景颜色 */
+    selection-color: #ffffff; /* 选中时的文本颜色 */
+}
+
+QLineEdit:focus {
+    border-color: #00796b; /* 聚焦时边框颜色变深 */
+    box-shadow: 0 0 4px rgba(0, 121, 107, 0.5); /* 聚焦时阴影效果 */
+}
+
+QLineEdit:disabled {
+    background-color: #d3e5f3; /* 禁用时背景颜色变浅 */
+    border-color: #a1c4dd; /* 禁用时边框颜色变浅 */
+    color: #6d8cac; /* 禁用时文本颜色变暗 */
+}
+
+QLineEdit::placeholder {
+    color: #6d8cac; /* 占位符文本颜色 */
+    font-style: italic; /* 占位符文本斜体 */
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ReverseBtn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    border: 2px solid #8f8f91; /* 设置按钮边框 */
+    border-radius: 10px; /* 设置按钮圆角 */
+    padding: 10px 20px; /* 设置按钮内边距 */
+    background-color: #d3d3d3; /* 设置浅灰色背景 */
+    color: black; /* 设置文本颜色为黑色，确保在浅灰色背景上清晰可见 */
+}
+ 
+QPushButton:hover {
+    background-color: #c0c0c0; /* 鼠标悬停时的背景颜色，稍微深一点的浅灰色 */
+}
+ 
+QPushButton:pressed {
+    background-color: #a9a9a9; /* 按钮按下时的背景颜色，再深一点的浅灰色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>颠倒</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_23">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+            </property>
+            <property name="text">
+             <string>终点</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="EndPointLine">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    background-color: #ffe6e6; /* 浅红色背景 */
+    border: 2px solid #ff6347; /* 鲜红色边框 */
+    border-radius: 4px; /* 圆角边框 */
+    padding: 5px; /* 内边距 */
+    color: #8b0000; /* 暗红色文本 */
+    selection-background-color: #ff4500; /* 选中时的背景颜色（橙色红） */
+    selection-color: #ffffff; /* 选中时的文本颜色（白色） */
+}
+
+QLineEdit:focus {
+    border-color: #dc143c; /* 聚焦时边框颜色变为更深的红色 */
+    box-shadow: 0 0 4px rgba(220, 20, 60, 0.5); /* 聚焦时阴影效果 */
+}
+
+QLineEdit:disabled {
+    background-color: #f5dcdc; /* 禁用时背景颜色变浅 */
+    border-color: #e9967a; /* 禁用时边框颜色变浅 */
+    color: #a52a2a; /* 禁用时文本颜色变暗 */
+}
+
+QLineEdit::placeholder {
+    color: #a52a2a; /* 占位符文本颜色（暗红色） */
+    font-style: italic; /* 占位符文本斜体 */
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="FilterBtn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    border: 2px solid #8f8f91; /* 设置按钮边框 */
+    border-radius: 10px; /* 设置按钮圆角 */
+    padding: 10px 20px; /* 设置按钮内边距 */
+    background-color: #90ee90; /* 设置浅绿色背景 */
+}
+
+QPushButton:hover {
+    background-color: #80e080; /* 鼠标悬停时的背景颜色，稍微深一点的浅绿色 */
+}
+
+QPushButton:pressed {
+    background-color: #70d070; /* 按钮按下时的背景颜色，再深一点的浅绿色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>筛选</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_24">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+            </property>
+            <property name="text">
+             <string>搜索航班</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="SeekLine">
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    background-color: #e6e6fa; /* 浅紫色背景 */
+    border: 2px solid #9b59b6; /* 紫色边框 */
+    border-radius: 4px; /* 圆角边框 */
+    padding: 5px; /* 内边距 */
+    color: #4b0082; /* 深紫色文本（与浅紫色背景形成对比） */
+    selection-background-color: #9b59b6; /* 选中时的背景颜色（与边框颜色相同） */
+    selection-color: #ffffff; /* 选中时的文本颜色（白色） */
+}
+
+QLineEdit:focus {
+    border-color: #6a0dad; /* 聚焦时边框颜色变深为深紫色 */
+    box-shadow: 0 0 4px rgba(106, 13, 173, 0.5); /* 聚焦时阴影效果使用深紫色RGBA */
+}
+
+QLineEdit:disabled {
+    background-color: #d8bfd8; /* 禁用时背景颜色变为更浅的紫色 */
+    border-color: #b09cd9; /* 禁用时边框颜色变为更浅的紫色 */
+    color: #800080; /* 禁用时文本颜色变为中紫色 */
+}
+
+QLineEdit::placeholder {
+    color: #800080; /* 占位符文本颜色使用中紫色 */
+    font-style: italic; /* 占位符文本斜体 */
+}</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="SeekBtn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    border: 2px solid #8f8f91; /* 设置按钮边框 */
+    border-radius: 10px; /* 设置按钮圆角 */
+    padding: 10px 20px; /* 设置按钮内边距 */
+    background-color: #90ee90; /* 设置浅绿色背景 */
+}
+
+QPushButton:hover {
+    background-color: #80e080; /* 鼠标悬停时的背景颜色，稍微深一点的浅绿色 */
+}
+
+QPushButton:pressed {
+    background-color: #70d070; /* 按钮按下时的背景颜色，再深一点的浅绿色 */
+}</string>
+            </property>
+            <property name="text">
+             <string>搜索</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+            </property>
+            <property name="text">
+             <string>当前时间：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="TimeLabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+    color: #333333; /* 深灰色文字，与对话框和文本输入框的文字颜色相同 */
+    font-size: 14px; /* 与按钮、对话框和文本输入框相同的字体大小 */
+    font-weight: normal; /* 默认字体粗细，可以根据需要调整 */
+    margin: 5px 0; /* 上下外边距，根据需要调整 */
+    background-color: transparent; /* 透明背景，不覆盖标签下的内容 */
+}
+
+QLabel:disabled {
+    color: #888888; /* 禁用时文字颜色变暗，与禁用状态的文本输入框一致 */
+}</string>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="AdminShowFlightArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>753</width>
+            <height>507</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout"/>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="AddFlightBtn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91; /* 设置按钮边框 */
+    border-radius: 10px; /* 设置按钮圆角 */
+    padding: 10px 20px; /* 设置按钮内边距 */
+    background-color: #90ee90; /* 设置浅绿色背景 */
+}
+
+QPushButton:hover {
+    background-color: #80e080; /* 鼠标悬停时的背景颜色，稍微深一点的浅绿色 */
+}
+
+QPushButton:pressed {
+    background-color: #70d070; /* 按钮按下时的背景颜色，再深一点的浅绿色 */
+}</string>
+         </property>
+         <property name="text">
+          <string>添加航班</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ExitBtn">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91; /* 设置按钮边框 */
+    border-radius: 10px; /* 设置按钮圆角 */
+    padding: 10px 20px; /* 设置按钮内边距 */
+    background-color: #d3d3d3; /* 设置浅灰色背景 */
+    color: black; /* 设置文本颜色为黑色，确保在浅灰色背景上清晰可见 */
+}
+ 
+QPushButton:hover {
+    background-color: #c0c0c0; /* 鼠标悬停时的背景颜色，稍微深一点的浅灰色 */
+}
+ 
+QPushButton:pressed {
+    background-color: #a9a9a9; /* 按钮按下时的背景颜色，再深一点的浅灰色 */
+}</string>
+         </property>
+         <property name="text">
+          <string>退出系统</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
